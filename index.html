@@ -1,128 +1,202 @@
-<html>
-<!---Theme by sirjosh10--->
-<!--
-                            |             |
-                            |\_         _/|
-                            |  \       /  |
-                             \ \ \---/ / /
-                              \___P V___/
-                              PROWLVISION
--->
-<!---Halo Blog List v.2.28.16--->
+<!DOCTYPE html>
+
+<!--Theme by onward-skies-->
+<!--OC Refsheet v.2.11.16-->
 
 <head>
 
+<!--Page Title-->
+<title>References</title>
 
-<link rel="shortcut icon" href="{Favicon}">
-    <title>The Halo Blog List</title>
+<!--Edit css below to change page style-->
 
-<style>
+<link rel="shortcut icon" href="{favicon}">
 
-h2 {
-    font-size: 20px;
-    font-weight: bold;
-}
+<style type="text/css">
+
+/*Page Styling*/
 body {
-    background: url("http://global.vellancecdn.com/aqsfol/jmipxg/securityCheck/images/bg.jpg") center center fixed no-repeat;
+    background: url("http://picsfab.com/download/image/75091/1920x1200_art-zvyozdyi-tumannost-oblaka-svechenie-kosmos.jpg") center center fixed no-repeat;
     background-size: cover;
-    text-align: center;
-    font-family: Arial;
-    font-size: 20px;
+    font-family: arial;
+    font-size: 18px;
 }
-a, a:hover {
-    color: white;
+/*Links Styling*/
+a {
+    color: black;
     text-decoration: none;
 }
-#nav-menu {
+/*Sidebar Styling*/
+#bar {
     position: fixed;
     display: block;
+    z-index: 999;
     top: 0px;
     left: 0px;
     width: 100%;
-    background: black;
-    list-style: none;
-    font-size: 20px;
+    height: 50px;
+    background: white;
     text-align: center;
-    z-index: 999;
+    font-size: 20px;
+    overflow: none;
 }
-#nav-menu li {
+#bar li {
     display: inline-block;
-    color: white;
-    padding: 20px;
+    padding: 10px 10px;
 }
-#nav-menu img {
-    height: 60px;
-    padding: 0 10px;
+#bar img {
+    height: 50px;
 }
 #right {
     float: right;
 }
-#dropdown {
+#left {
     float: left;
 }
-#dropdown:hover {
-    background: gray;
-}
-#dropdown-content {
-    text-align: left;
-    display: none;
-    position: absolute;
-    top: 64px;
+#sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
     left: 0px;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
+    width: 240px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-x: none;
+    overflow-y: auto;
+    transition-property: all;
+    transition-duration: .75s;
+    background: rgba(0,0,0,.7);
 }
-#dropdown-content a {
-    color: black;
-    background: white;
-    padding: 10px 20px;
-    text-decoration: none;
+#sidebar:hover {
+    background: rgba(0,0,0,.8);
+}
+#sidebar input {
+    padding: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: inherit;
+    width: 80%;
+}
+#sidebar nav a {
+    color: white;
     display: block;
+    padding: 6px 10px;
+    transition-property: all;
+    transition-duration: .5s;
+    opacity: .8;
 }
-#dropdown-content a:hover {
-    background-color: rgb(200,200,200);
-    box-shadow: inset 4px 0px 0px 0px rgba(0,0,0,0.4);
+#sidebar nav a:hover {
+    opacity: 1.0;
+    background: rgba(100,100,100,.6);
+    box-shadow: inset 4px 0px 0px 0px gray;
 }
-#dropdown:hover #dropdown-content {
-    display: block;
+#sidebar nav a:active {
+    box-shadow: inset 10px 0px 0px 0px yellow;
 }
-#searchform {
+#credit {
     position: absolute;
     display: block;
-    margin-top: 3px;
-    right: 0px;
-    max-width: 300px;
-    max-height: 30px;
-    padding: 10px;
-    background: white;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
     transition-property: all;
-    transition-duration: .6s;
-    opacity: .4;
+    transition-duration: .5s;
+    opacity: .2;
 }
-#searchform:hover {
+#credit:hover {
     opacity: 1.0;
 }
-#button {
+#credit a {
     color: white;
-    background: #529ecc;
-    border: 0px;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
 }
-#guide {
-    display: block;
-    color: rgb(200,200,200);
-    background: rgba(0,0,0,.4);
-    border-radius: 5px;
+#entries {
     margin: 10%;
-    padding: 10px 20px;
 }
-#guide img {
-    height: 25px;
-    margin: 0 5px;
+/*Post Editing*/
+#post {
+    display: block;
+    overflow: auto;
+    margin: 50px 0px;
+    padding: 10px 30px;
+    transition-property: all;
+    transition-duration: 1.0s;
+    background: rgba(255,255,255,.7);
+}
+#post:hover {
+    box-shadow: 0 0 20px white;
+    background: rgb(255,255,255);
+}
+#post h1, h1 a {
+    display: block;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 4px;
+    text-transform: uppercase;
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+#post block {
+    width: 49%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+}
+#post block img {
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 50%;
+}
+#post bot {
+    height: 40px;
+    width: 50px;
+    background: url("http://tfwiki.net/mediawiki/images2/f/fe/Symbol_autobot_reg.png") no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+#post con {
+    height: 40px;
+    width: 40px;
+    background: url("http://pre04.deviantart.net/d06f/th/pre/f/2012/224/c/0/decepticon_logo_vector_by_robzombiefan2121-d576sf1.png") no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-bottom: -7px;
+}
+#post sgbot {
+    height: 40px;
+    width: 40px;
+    background: url("http://pre01.deviantart.net/b1de/th/pre/i/2013/237/5/e/transformers_shattered_glass___autobots_symbol_by_mr_droy-d5er78x.png") no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-bottom: -7px;
+}
+#post sgcon {
+    height: 40px;
+    width: 40px;
+    background: url("http://vignette4.wikia.nocookie.net/transformers/images/3/3e/Decepticon_Shattered_Glass.png/revision/latest?cb=20080527035313") no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-bottom: -5px;
+}
+#post nest {
+    height: 40px;
+    width: 40px;
+    background: url("http://i470.photobucket.com/albums/rr62/SLSW_01/NEST.png") no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-bottom: -5px;
+}
+/*No touchy*/
+.hidden {
+    display: none;
+}
+.unhidden {
+    display: block;
 }
 #return {
     position: fixed;
@@ -132,6 +206,7 @@ a, a:hover {
     padding: 10px;
     background: rgba(0,0,0,.8);
     border-radius: 5px;
+    font-size: 20px;
 }
 #return a {
     display: block;
@@ -140,2616 +215,1535 @@ a, a:hover {
 #return a:hover {
     color: white;
 }
-#player {
+footer {
     position: fixed;
     display: block;
-    background: rgba(0,0,0,.4);
-    top: 100px;
-    padding: 5px;
-    font-size: 30px;
-    border-radius: 5px;
-    transition-property: all;
-    transition-duration: .75s;
-    left: -205px;
-    text-shadow: 0 0 10px white;
-}
-#player:hover {
+    z-index: -1;
+    bottom: 0px;
     left: 0px;
-    color: white;
-    text-shadow: 0 0 20px white;
-    background: rgba(0,0,0,.8);
-}
-.hidden {
-    display: none;
-}
-.unhidden {
-    display: block;
-}
-#table {
-	margin: 10%;
-	border: 1px solid black;
-	background-color: rgba(255,255,255,.1);
-	font-weight: bold;
-}
-#table table {
-    border-collapse: collapse;
-    border-spacing: 0;
-	width: 100%;
-	text-align: left;
-	font-size: 20px;
-}
-#table, th, td {
-   border: 1px solid black;
-   padding: 10px;
-   overflow: auto;
-}
-#table thead {
-    cursor: pointer;
-    background: rgba(255,255,255,.2);
-}
-#table G {
-	width: 10px;
-	height: 10px;
-	background: lime;
-	border-radius: 50%;
-	float: right;
-}
-#table Y {
-	width: 10px;
-	height: 10px;
-	background: yellow;
-	border-radius: 50%;
-	float: right;
-}
-#table R {
-	width: 10px;
-	height: 10px;
-	background: red;
-	border-radius: 50%;
-	float: right;
-}
-footer, footer a {
+    width: 100%;
+    padding: 4px 0px;
+    text-align: center;
     color: gray;
-    margin-bottom: 10px;
-    font-size: 18px;
+    opacity: .4;
 }
-
 </style>
 
-<meta name="viewport" content="width=device-width">
+<!--Scripts-->
 
-<script type="text/javascript">
+<script>
  function unhide(entry) {var item = document.getElementById(entry);
  if (item) {item.className=(item.className=='hidden')?'unhidden':'hidden';}}
 </script>
 
-<script type="text/javascript" src="https://dl.dropboxusercontent.com/s/v0fty8606qdwadd/sorttable.js"></script>
-
+<meta name="viewport" content="width=device-width">
 
 </head>
-
 <body>
 
-    
-<div id="nav-menu">
 
-    <li id="dropdown">&#9776;
-        <div id="dropdown-content">
-            <a href="/">Home</a>
-            <a href="/directory">Directory</a>
-            <a href="/ask">Ask/Register</a>
-            <a href="/about">About</a>
-            <a><form onsubmit="window.location = 'http://www.tumblr.com/follow/' + search.value; return false;" target="_blank">
-<input id="search" placeholder="username" type="search" name="search"></input>
-<input type="submit" value="Follow" id="button">
-</form></a>
-        </div>
-    </li>
-    <li>Blog List</li>
-    <a href="/"id="right" title="{Title}"><img src="{Favicon}"></a>
-    
+<!--Change links in menu here-->
+<div id ="bar">
+    <li id="left"><a href="javascript:unhide('sidebar');" >&#9776; Menu</a></li>
+    <li style="margin-top:4px;">OC References</li>
+    <a href="/" id="right" title="Return to {Title}">
+    <img src="{PortraitURL-128}"></img></a>
 </div>
 
 
+<div id="sidebar" class="hidden">
+    <nav>
+        <a href="/">Home</a>
+        <a href="/archive">Archive</a>
+        <a href="/ask">Ask</a>
+        <a href="/submit">Submit</a>
+        <a><form method="get" action="/search">
+        <input type="text" placeholder="Search" value="" name="q"></input>
+        </form></a> 
+    </nav>
 
-<div id="player">
-<iframe width="200" height="112" src="https://www.youtube.com/embed/videoseries?list=PLkOKw5hgqX0ceXY5Qtr0XQuQ-85eZ__zn" frameborder="0" allowfullscreen></iframe>♫
+    <div id="credit">
+        Theme by <a href="http://www.onward-skies.tumblr.com">onward-skies</a>
+    </div>
+    
 </div>
 
-
-<div id="return">
+<div id="return"><!--Navigation Buttons-->
     <a href="#top">▲</a>
     <a href="#bottom">▼</a>
 </div>
 
+<div id="entries"><!--Entries Begin-->
 
-<div id="guide"><div id="post">
-<a href="javascript:unhide('entry');">
-<p><b id="top">Guide</b></p></a>
-<div id="entry" class="hidden">
-<p>This page serves as a resource within the Halo community as an archive and a reference. It is a place for blogs long forgotten, and those just beggining.</p>
 
-<p>Information can be updated, added, or removed by sending an ask.</p>
+<div id="post"><!--post begins-->
 
-<p>Any blogs that post Halo content can join, thanks for visiting!</p>
+<h1 id="top"><!--Change title of block here-->
+    About This Page
+</h1>
 
-<!-- share buttons from simplesharebuttons.com -->
-    <!-- Facebook -->
-    <a href="http://www.unsc-waypoint.tumblr.com/s/facebook" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png"/>
-    </a>
-    <!-- Tumblr-->
-    <a href="http://www.unsc-waypoint.tumblr.com/s/tumblr" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/tumblr.png"/>
-    </a>
-     <!-- Twitter -->
-    <a href="http://www.unsc-waypoint.tumblr.com/s/twitter" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/twitter.png"/>
-    </a>
-    <!-- Google+ -->
-    <a href="http://www.unsc-waypoint.tumblr.com/s/google+" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/google.png"/>
-    </a>
-    <!-- Reddit -->
-    <a href="http://www.unsc-waypoint.tumblr.com/s/reddit" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/reddit.png">
-    </a>
-
-</div></div></div>
-
-
-
-
-
-
-<div id="table">
-<table>
-
-<tr>
-<td><h2>Active:<G></G></h2></td>
-<td><h2>Unknown:<Y></Y></h2></td>
-<td><h2>Inactive:<R></R></h2></td>
-</tr>
-
-</table>
-
-
-<p><h1>The Halo Blog List</h1></p>
-<p>Last Update: 28 February 2016</p>
-
-
-
-
-<table class="sortable">
-
-<thead>
-<th></th>
-<th>Blog</th>
-<th>Status</th>
-<th>Type</th>
-</thead>
-
-<tbody>
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/117--087.tumblr.com/avatar/40'/></td>
-<td><a href="http://117--087.tumblr.com" >117--087</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Focus - Spartans 117 John & 087 Kelly</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/1morefandomblog.tumblr.com/avatar/40'/></td>
-<td><a href="http://1morefandomblog.tumblr.com" >1morefandomblog</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/343i.tumblr.com/avatar/40'/></td>
-<td><a href="http://343i.tumblr.com" >343i</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/aauditor.tumblr.com/avatar/40'/></td>
-<td><a href="http://aauditor.tumblr.com" >aauditor</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom/Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/admiralprestoncole.tumblr.com/avatar/40'/></td>
-<td><a href="http://admiralprestoncole.tumblr.com" >admiralprestoncole</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/aeternaregnare-archive.tumblr.com/avatar/40'/></td>
-<td><a href="http://aeternaregnare-archive.tumblr.com" >aeternaregnare</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan B312 Akemi</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/afieryspxrit.tumblr.com/avatar/40'/></td>
-<td><a href="http://afieryspxrit.tumblr.com" >afieryspxrit</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST Edan Arluin</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/a-ghost-of-onyx.tumblr.com/avatar/40'/></td>
-<td><a href="http://a-ghost-of-onyx.tumblr.com" >a-ghost-of-onyx</a></td><td sorttable_customkey="1"><G></G></td>
-<td>NSFW</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/akadoragon.tumblr.com/avatar/40'/></td>
-<td><a href="http://akadoragon.tumblr.com" >akadoragon</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Fan Fiction</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/allthingshalo.tumblr.com/avatar/40'/></td>
-<td><a href="http://allthingshalo.tumblr.com" >allthingshalo</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/alpha-013.tumblr.com/avatar/40'/></td>
-<td><a href="http://alpha-013.tumblr.com" >alpha-013</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan 013 Ron</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/anakinestanislao.tumblr.com/avatar/40'/></td>
-<td><a href="http://anakinestanislao.tumblr.com" >anakinestanislao</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/andrewt117.tumblr.com/avatar/40'/></td>
-<td><a href="http://andrewt117.tumblr.com" >andrewt117</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/andthisishowitallends.tumblr.com/avatar/40'/></td>
-<td><a href="http://andthisishowitallends.tumblr.com" >andthisishowitallends</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Fan Fiction/Webcomic</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/arbiteranalysis.tumblr.com/avatar/40'/></td>
-<td><a href="http://arbiteranalysis.tumblr.com" >arbiteranalysis</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Analysis/Focus - Thel 'Vadam</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/arbiter-thel-vadam.tumblr.com/avatar/40'/></td>
-<td><a href="http://arbiter-thel-vadam.tumblr.com" >arbiter-thel-vadam</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Thel 'Vadam</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/arkanhalo.tumblr.com/avatar/40'/></td>
-<td><a href="http://arkanhalo.tumblr.com" >arkanhalo</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/artisanforegoer.tumblr.com/avatar/40'/></td>
-<td><a href="http://artisanforegoer.tumblr.com" >artisanforegoer</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/artisticallyquiet.tumblr.com/avatar/40'/></td>
-<td><a href="http://artisticallyquiet.tumblr.com" >artisticallyquiet</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan S058 Linda</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask117.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask117.tumblr.com" >ask117</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Ask - Spartan 117 John</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-agentasia.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-agentasia.tumblr.com" ></tds>ask-agentasia</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP/Ask - RVB Agent Asia</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-an-odst.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-an-odst.tumblr.com" ></tds>ask-an-odst</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Ask - The Rookie</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/askdrcatherinehalsey.tumblr.com/avatar/40'/></td>
-<td><a href="http://askdrcatherinehalsey.tumblr.com" ></tds>askdrcatherinehalsey</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Ask - Catherine Halsey</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/askdrhalsey-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://askdrhalsey-blog.tumblr.com" ></tds>askdrhalsey-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Ask - Catherine Halsey</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/askjulmdama.tumblr.com/avatar/40'/></td>
-<td><a href="http://askjulmdama.tumblr.com" >askjulmdama</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP/Ask - Jul 'Mdama</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-odst-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-odst-blog.tumblr.com" >ask-odst-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Ask - SGT Rob Soren</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-oni-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-oni-blog.tumblr.com" >ask-oni-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP/Ask - ONI</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-the-arbiter.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-the-arbiter.tumblr.com" >ask-the-arbiter</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP/Ask - Thel 'Vadam</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ask-the-odst.tumblr.com/avatar/40'/></td>
-<td><a href="http://ask-the-odst.tumblr.com" >ask-the-odst</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/assistant-supreme-commander.tumblr.com/avatar/40'/></td>
-<td><a href="http://assistant-supreme-commander.tumblr.com" >assistant-supreme-commander</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Rtas 'Vadum</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/astra-incliinant.tumblr.com/avatar/40'/></td>
-<td><a href="http://astra-incliinant.tumblr.com" >astra-incliinant</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 051 Kurt</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/avenge-benjamin-giraud.tumblr.com/avatar/40'/></td>
-<td><a href="http://avenge-benjamin-giraud.tumblr.com" >avenge-benjamin-giraud</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Anti-ONI Activist</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/backupintendent.tumblr.com/avatar/40'/></td>
-<td><a href="http://backupintendent.tumblr.com" >backupintendent</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Fiction/webcomic</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/basvia.tumblr.com/avatar/40'/></td>
-<td><a href="http://basvia.tumblr.com" >basvia</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/believe-in-117.tumblr.com/avatar/40'/></td>
-<td><a href="http://believe-in-117.tumblr.com/" >believe-in-117</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/bigstupidsangheililover.tumblr.com/avatar/40'/></td>
-<td><a href="http://bigstupidsangheililover.tumblr.com" >bigstupidsangheililover</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Sangheili</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/bisexual-arbiter.tumblr.com/avatar/40'/></td>
-<td><a href="http://bisexual-arbiter.tumblr.com" >bisexual-arbiter</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to sailorsanghelios</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/blade-of-the-prophets.tumblr.com/avatar/40'/></td>
-<td><a href="http://blade-of-the-prophets.tumblr.com/" >blade-of-the-prophets</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/bryanthebigboss.tumblr.com/avatar/40'/></td>
-<td><a href="http://bryanthebigboss.tumblr.com/" >bryanthebigboss</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - Halo 5: Guardians</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/bullets-and-corvo.tumblr.com/avatar/40'/></td>
-<td><a href="http://bullets-and-corvo.tumblr.com" >bullets-and-corvo</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/bungieblog-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://bungieblog-blog.tumblr.com" >bungieblog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Dev Blog</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/buwx.tumblr.com/avatar/40'/></td>
-<td><a href="http://buwx.tumblr.com" >buwx</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>General/Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/captain-keyes.tumblr.com/avatar/40'/></td>
-<td><a href="http://captain-keyes.tumblr.com" >captain-keyes</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/captain-lorasis.tumblr.com/avatar/40'/></td>
-<td><a href="http://captain-lorasis.tumblr.com" >captain-lorasis</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/capturesdinstant.tumblr.com/avatar/40'/></td>
-<td><a href="http://capturesdinstant.tumblr.com" >capturesdinstant</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cartridges-in-my-soup.tumblr.com/avatar/40'/></td>
-<td><a href="http://cartridges-in-my-soup.tumblr.com" >cartridges-in-my-soup</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/chant-to-green.tumblr.com/avatar/40'/></td>
-<td><a href="http://chant-to-green.tumblr.com" >chant-to-green</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/chief-cortana.tumblr.com/avatar/40'/></td>
-<td><a href="http://chief-cortana.tumblr.com" >chief-cortana</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/chiefvlogs.tumblr.com/avatar/40'/></td>
-<td><a href="http://chiefvlogs.tumblr.com" >chiefvlogs</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/christian-b122.tumblr.com/avatar/40'/></td>
-<td><a href="http://christian-b122.tumblr.com/" >christian-b122</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan B122 Christian</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cknmole.tumblr.com/avatar/40'/></td>
-<td><a href="http://cknmole.tumblr.com/" >cknmole</a>
-</td><td sorttable_customkey="3"><R></R></td>
-<td>Community</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cpl-hernandez-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://cpl-hernandez-blog.tumblr.com/" >cpl-hernandez-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - CPL Hernandez</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/company0051.tumblr.com/avatar/40'/></td>
-<td><a href="http://company0051.tumblr.com/" >company0051</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Fiction/webcomic</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/contxnder.tumblr.com/avatar/40'/></td>
-<td><a href="http://contxnder.tumblr.com/" >contxnder</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - 05-032 Mendicant Bias</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/corbuloacademy.tumblr.com/avatar/40'/></td>
-<td><a href="http://corbuloacademy.tumblr.com/" >corbuloacademy</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/corbuloacademyy.tumblr.com/avatar/40'/></td>
-<td><a href="http://corbuloacademyy.tumblr.com/">corbuloacademyy</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Forward Unto Dawn</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortana556.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortana556.tumblr.com/">cortana556</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortanaia.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortanaia.tumblr.com/">cortanaia</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Cortana</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortana-goddess-divine.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortana-goddess-divine.tumblr.com/">cortana-goddess-divine</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortanakun.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortanakun.tumblr.com/" >cortanakun</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Relocated</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/corttana.tumblr.com/avatar/40'/></td>
-<td><a href="http://corttana.tumblr.com" >corttana</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Screenshots & edits</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortana-the-rampant-paradox.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortana-the-rampant-paradox.tumblr.com" >cortana-the-rampant-paradox</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - AI Cortana</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cortnan.tumblr.com/avatar/40'/></td>
-<td><a href="http://cortnan.tumblr.com" >cortnan</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art/Focus - Spartan 117 John & AI Cortana</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/cryptumforerunner-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://cryptumforerunner-blog.tumblr.com" >cryptumforerunner-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/covenantempire.tumblr.com/avatar/40'/></td>
-<td><a href="http://covenantempire.tumblr.com" >covenantempire</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dailyreach.tumblr.com/avatar/40'/></td>
-<td><a href="http://dailyreach.tumblr.com" >dailyreach</a></td>
-<td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: Reach</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/danielm47.tumblr.com/avatar/40'/></td>
-<td><a href="http://danielm47.tumblr.com" >danielm47</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/daxwa-maxd.tumblr.com/avatar/40'/></td>
-<td><a href="http://daxwa-maxd.tumblr.com" >daxwa-maxd</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Agnes Cortes</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dendritic-trees.tumblr.com/avatar/40'/></td>
-<td><a href="http://dendritic-trees.tumblr.com" >dendritic-trees</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dexthfromabxve.tumblr.com/avatar/40'/></td>
-<td><a href="http://dexthfromabxve.tumblr.com/" >dexthfromabxve</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Koga Ajr-Danum</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dianndroid.tumblr.com/avatar/40'/></td>
-<td><a href="http://dianndroid.tumblr.com/" >dianndroid</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dontmakeapromiseyoucantkeep117.tumblr.com/avatar/40'/></td>
-<td><a href="http://dontmakeapromiseyoucantkeep117.tumblr.com/">dontmakeapromiseyoucantkeep11</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/drakoconnor-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://drakoconnor-blog.tumblr.com" >drakoconnor-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - ODST Drak O'Connor</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/dreadedwalnutbrand.tumblr.com/avatar/40'/></td>
-<td><a href="http://dreadedwalnutbrand.tumblr.com" >dreadedwalnutbrand</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Ord Casto (High Prophet of Truth)</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/duckteamosiris.tumblr.com/avatar/40'/></td>
-<td><a href="http://duckteamosiris.tumblr.com" >duckteamosiris</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Community</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ecumenecouncil.tumblr.com/avatar/40'/></td>
-<td><a href="http://ecumenecouncil.tumblr.com" >ecumenecouncil</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/epicinrelativity.tumblr.com/avatar/40'/></td>
-<td><a href="http://epicinrelativity.tumblr.com" >epicinrelativity</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/epsilonss.tumblr.com/avatar/40'/></td>
-<td><a href="http://epsilonss.tumblr.com" >epsilonss</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/falling-towards-the-sky.tumblr.com/avatar/40'/></td>
-<td><a href="http://falling-towards-the-sky.tumblr.com" >falling-towards-the-sky</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fal-mora.tumblr.com/avatar/40'/></td>
-<td><a href="http://fal-mora.tumblr.com" >fal-mora</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Fal Mora</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fall-0f-reach.tumblr.com/avatar/40'/></td>
-<td><a href="http://fall-0f-reach.tumblr.com" >fall-0f-reach</a></td><td sorttable_customkey="3"><R></R></td>
-<td>&nbsp;</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fathomingstormborne.tumblr.com/avatar/40'/></td>
-<td><a href="http://fathomingstormborne.tumblr.com" >fathomingstormborne</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 052 Jorge</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/finiteandprecious.tumblr.com/avatar/40'/></td>
-<td><a href="http://finiteandprecious.tumblr.com" >finiteandprecious</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - The Librarian</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fireteamgaysiris.tumblr.com/avatar/40'/></td>
-<td><a href="http://fireteamgaysiris.tumblr.com" >fireteamgaysiris</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Fireteam Osiris</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/firerwolf.tumblr.com/avatar/40'/></td>
-<td><a href="http://firerwolf.tumblr.com" >firerwolf</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Fiction</td>
-</tr>
-
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/flammable-potato.tumblr.com/avatar/40'/></td>
-<td><a href="http://flammable-potato.tumblr.com" >flammable-potato</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/forerunner-archive.tumblr.com/avatar/40'/></td>
-<td><a href="http://forerunner-archive.tumblr.com" >forerunner-archive</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Archive</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/forerunnerr.tumblr.com/avatar/40'/></td>
-<td><a href="http://forerunnerr.tumblr.com" >forerunnerr</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to lshimura</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/forgecutteranders.tumblr.com/avatar/40'/></td>
-<td><a href="http://forgecutteranders.tumblr.com" >forgecutteranders</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Halo Wars</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fortis--etliber.tumblr.com/avatar/40'/></td>
-<td><a href="http://fortis--etliber.tumblr.com/" >fortis–etliber</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST Edward Buck</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/forward-unto-halo.tumblr.com/avatar/40'/></td>
-<td><a href="http://forward-unto-halo.tumblr.com" >forward-unto-halo</a></td><td sorttable_customkey="1"><G></G></td>
-<td>&nbsp;</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/freelancer-missouri.tumblr.com/avatar/40'/></td>
-<td><a href="http://freelancer-missouri.tumblr.com/" >freelancer-missouri</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - RVB Agent Missouri</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fromhighcharity.tumblr.com/avatar/40'/></td>
-<td><a href="http://fromhighcharity.tumblr.com/" >fromhighcharity</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fuck-that-halo-guy.tumblr.com/avatar/40'/></td>
-<td><a href="http://fuck-that-halo-guy.tumblr.com/" >fuck-that-halo-guy</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fuckyeah117.tumblr.com/avatar/40'/></td>
-<td><a href="http://fuckyeah117.tumblr.com" >fuckyeah117</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fuckyeahalo.tumblr.com/avatar/40'/></td>
-<td><a href="http://fuckyeahalo.tumblr.com" >fuckyeahalo</a></td><td sorttable_customkey="3"><R></R></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fullthrottleep.tumblr.com/avatar/40'/></td>
-<td><a href="http://fullthrottleep.tumblr.com" >fullthrottleep</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan C541 Carlos</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/futures-for-discovering.tumblr.com/avatar/40'/></td>
-<td><a href="http://futures-for-discovering.tumblr.com" >futures-for-discovering</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fyeahhalo-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://fyeahhalo-blog.tumblr.com" >fyeahhalo-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fyeahredvsblue.tumblr.com/avatar/40'/></td>
-<td><a href="http://fyeahredvsblue.tumblr.com" >fyeahredvsblue</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fyeahsangheili.tumblr.com/avatar/40'/></td>
-<td><a href="http://fyeahsangheili.tumblr.com" >fyeahsangheili</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Sangheili</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/fyfps.tumblr.com/avatar/40'/></td>
-<td><a href="http://fyfps.tumblr.com" >fyfps</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/gamingcraze.tumblr.com/avatar/40'/></td>
-<td><a href="http://gamingcraze.tumblr.com" >gamingcraze</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/gavin-t742.tumblr.com/avatar/40'/></td>
-<td><a href="http://gavin-t742.tumblr.com" >gavin-t742</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan T742 Gavin & 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ghosts-of-onyx.tumblr.com/avatar/40'/></td>
-<td><a href="http://ghosts-of-onyx.tumblr.com" >ghosts-of-onyx</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ghost-of-reach.tumblr.com/avatar/40'/></td>
-<td><a href="http://ghost-of-reach.tumblr.com" >ghost-of-reach</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/givethecovenantbacktheirbomb.tumblr.com/avatar/40'/></td>
-<td><a href="http://givethecovenantbacktheirbomb.tumblr.com" >givethecovenantbacktheirbomb</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP/Ask - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/greenreticule.tumblr.com/avatar/40'/></td>
-<td><a href="http://greenreticule.tumblr.com/" >greenreticule</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Analysis/General/Ducks</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/grifball-hub.tumblr.com/avatar/40'/></td>
-<td><a href="http://grifball-hub.tumblr.com/" >grifball-hub</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Community</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo2book.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo2book.tumblr.com/" >halo2book</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Halo 2</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo3.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo3.tumblr.com/" >halo3</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 3</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo3forxbox.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo3forxbox.tumblr.com/" >halo3forxbox</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 3</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo3guide.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo3guide.tumblr.com/" >halo3guide</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 3</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo3odstreview.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo3odstreview.tumblr.com/" >halo3odstreview</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 3 ODST</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-4-loadouts.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-4-loadouts.tumblr.com/" >halo-4-loadouts</a></td>
-<td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo4newsnow.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo4newsnow.tumblr.com/" >halo4newsnow</a></td><td sorttable_customkey="3"><R></R></td>
-<td>News - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo4players-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo4players-blog.tumblr.com/" >halo4players</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo5game.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo5game.tumblr.com/" >halo5game</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-5-guardians.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-5-guardians.tumblr.com/" >halo-5-guardians</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo5news.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo5news.tumblr.com/" >halo5news</a></td><td sorttable_customkey="3"><R></R></td>
-<td>News - Halo 5</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo5tips.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo5tips.tumblr.com/" >halo5tips</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo5tricks.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo5tricks.tumblr.com/" >halo5tricks</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo7.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo7.tumblr.com/" >halo7</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloallnightlong.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloallnightlong.tumblr.com" >haloallnightlong</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloarchives.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloarchives.tumblr.com" >haloarchives</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Archive</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloblog101.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloblog101.tumblr.com" >haloblog101</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloceanniversary.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloceanniversary.tumblr.com" >haloceanniversary</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: CE</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halochannel.tumblr.com/avatar/40'/></td>
-<td><a href="http://halochannel.tumblr.com" >halochannel</a></td><td sorttable_customkey="1"><G></G></td>
-<td>News/Lore</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloclan.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloclan.tumblr.com" >haloclan</a></td>
-<td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: Reach</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloconceptart.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloconceptart.tumblr.com" >haloconceptart</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Concept Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halofiveguardians.tumblr.com/avatar/40'/></td>
-<td><a href="http://halofiveguardians.tumblr.com" >halofiveguardians</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halogasm4.tumblr.com/avatar/40'/></td>
-<td><a href="http://halogasm4.tumblr.com" >halogasm4</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halogifs.tumblr.com/avatar/40'/></td>
-<td><a href="http://halogifs.tumblr.com">halogifs</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Screenshots</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-legends.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-legends.tumblr.com" >halo-legends</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halolife13.tumblr.com/avatar/40'/></td>
-<td><a href="http://halolife13.tumblr.com" >halolife13</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-master-chief.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-master-chief.tumblr.com" >halo-master-chief</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halomasterchiefcollection.tumblr.com/avatar/40'/></td>
-<td><a href="http://halomasterchiefcollection.tumblr.com" >halomasterchiefcollection</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halomusic.tumblr.com/avatar/40'/></td>
-<td><a href="http://halomusic.tumblr.com" >halomusic</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Music</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-network.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-network.tumblr.com">halo-network</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Unknown (auth code: [unknown])</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halonewsnow.tumblr.com/avatar/40'/></td>
-<td><a href="http://halonewsnow.tumblr.com">halonewsnow</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>News/Updates</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-nigga.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-nigga.tumblr.com">halo-nigga</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloreach.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloreach.tumblr.com">haloreach</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloreachfails-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloreachfails-blog.tumblr.com">haloreachfails</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Comics</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloreachmemes-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloreachmemes-blog.tumblr.com">haloreachmemes</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Comics</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloreachscience.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloreachscience.tumblr.com">haloreachscience</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: Reach</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-rvb-canon.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-rvb-canon.tumblr.com">halo-rvb-canon</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-spartan117-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-spartan117-blog.tumblr.com">halo-spartan117-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-spartans.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-spartans.tumblr.com">halo-spartans</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Community</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halospartanassaultgaming.tumblr.com/avatar/40'/></td>
-<td><a href="http://halospartanassaultgaming.tumblr.com">halospartanassaultgaming</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo Spartan Assault</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloswag.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloswag.tumblr.com">haloswag</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halothoughts.tumblr.com/avatar/40'/></td>
-<td><a href="http://halothoughts.tumblr.com">halothoughts</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halotips323.tumblr.com/avatar/40'/></td>
-<td><a href="http://halotips323.tumblr.com">halotips323</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halotutor.tumblr.com/avatar/40'/></td>
-<td><a href="http://halotutor.tumblr.com">halotutor</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - Halo 5</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halo-universe.tumblr.com/avatar/40'/></td>
-<td><a href="http://halo-universe.tumblr.com" >halo-universe</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halouniverseblr.tumblr.com/avatar/40'/></td>
-<td><a href="http://halouniverseblr.tumblr.com" >halouniverseblr</a></td><td sorttable_customkey="3"><R></R></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halounsc.tumblr.com/avatar/40'/></td>
-<td><a href="http://halounsc.tumblr.com">halounsc</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>General</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halowars.tumblr.com/avatar/40'/></td>
-<td><a href="http://halowars.tumblr.com">halowars</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo Wars</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halowarsreview.tumblr.com/avatar/40'/></td>
-<td><a href="http://halowarsreview.tumblr.com">halowarsreview</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - Halo Wars</td></td>
-</tr>
-<!---
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halowars2review.tumblr.com/avatar/40'/></td>
-<td><a href="http://halowars2review.tumblr.com">halowars2review</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
--->
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/halowheelmen.tumblr.com/avatar/40'/></td>
-<td><a href="http://halowheelmen.tumblr.com">halowheelmen</a>
-</td><td sorttable_customkey="1"><G></G></td>
-<td>Community</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haloxconfessions.tumblr.com/avatar/40'/></td>
-<td><a href="http://haloxconfessions.tumblr.com">haloxconfessions</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haosan.tumblr.com/avatar/40'/></td>
-<td><a href="http://haosan.tumblr.com">haosan</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/haruspis.tumblr.com/avatar/40'/></td>
-<td><a href="http://haruspis.tumblr.com" >haruspis</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Analysis/Lore</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/harvestcampaign.tumblr.com/avatar/40'/></td>
-<td><a href="http://harvestcampaign.tumblr.com" >harvestcampaign</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/helljumpingfirefighter.tumblr.com/avatar/40'/></td>
-<td><a href="http://helljumpingfirefighter.tumblr.com">helljumpingfirefighter</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - SGT Pavel Andreevich</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/hephaestusengineer.tumblr.com/avatar/40'/></td>
-<td><a href="http://hephaestusengineer.tumblr.com">hephaestusengineer</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/hollytanaka.tumblr.com/avatar/40'/></td>
-<td><a href="http://hollytanaka.tumblr.com">hollytanaka</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/holy-tanaka-what-the-buck.tumblr.com/avatar/40'/></td>
-<td><a href="http://holy-tanaka-what-the-buck.tumblr.com">holy-tanaka-what-the-buck</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/huntthetruth.tumblr.com/avatar/40'/></td>
-<td><a href="http://huntthetruth.tumblr.com" >huntthetruth</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Journal/ Audio Archive</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/huragoks.tumblr.com/avatar/40'/></td>
-<td><a href="http://huragoks.tumblr.com" >huragoks</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/hybridandancilla.tumblr.com/avatar/40'/></td>
-<td><a href="http://hybridandancilla.tumblr.com">hybridandancilla</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Acid, Catherine Halsey</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/hybridnibiru.tumblr.com/avatar/40'/></td>
-<td><a href="http://hybridnibiru.tumblr.com" >hybridnibiru</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - AI Nibiru</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/i-am-not-leaving-you-here.tumblr.com/avatar/40'/></td>
-<td><a href="http://i-am-not-leaving-you-here.tumblr.com" >i-am-not-leaving-you-here</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/icametohearthembeg.tumblr.com/avatar/40'/></td>
-<td><a href="http://icametohearthembeg.tumblr.com">icametohearthembeg</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Ripa 'Moramee</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/iluvoreos.tumblr.com/avatar/40'/></td>
-<td><a href="http://iluvoreos.tumblr.com" >iluvoreos</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Cosplay</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/imperaxx.tumblr.com/avatar/40'/></td>
-<td><a href="http://imperaxx.tumblr.com" >imperaxx</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 100 Emrys</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/imjustapacifist.tumblr.com/avatar/40'/></td>
-<td><a href="http://imjustapacifist.tumblr.com" >
- imjustapacifist</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - RVB Frank ‘Doc’ DuFresne</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/indxmitable1337.tumblr.com/avatar/40'/></td>
-<td><a href="http://indxmitable1337.tumblr.com" >indxmitable1337</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 1337</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/infinityblueyes.tumblr.com/avatar/40'/></td>
-<td><a href="http://infinityblueyes.tumblr.com" >infinityblueyes</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/infinity-nine-nine.tumblr.com/avatar/40'/></td>
-<td><a href="http://infinity-nine-nine.tumblr.com" >infinity-nine-nine</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Crossover</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/installation-117.tumblr.com/avatar/40'/></td>
-<td><a href="http://installation-117.tumblr.com" >installation-117</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/isaachannaford.tumblr.com/avatar/40'/></td>
-<td><a href="http://isaachannaford.tumblr.com">isaachannaford</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ishimura.tumblr.com/avatar/40'/></td>
-<td><a href="http://ishimura.tumblr.com" >ishimura</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to sko-las</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/isosayaka117.tumblr.com/avatar/40'/></td>
-<td><a href="http://isosayaka117.tumblr.com" >isosayaka117</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/italian-fixer-soldier.tumblr.com/avatar/40'/></td>
-<td><a href="http://italian-fixer-soldier.tumblr.com">italian-fixer-soldier</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan E626 Alviero</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/itsalwaysgarytime.tumblr.com/avatar/40'/></td>
-<td><a href="http://itsalwaysgarytime.tumblr.com" >itsalwaysgarytime</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ivewatingsolongtodothat.tumblr.com/avatar/40'/></td>
-<td><a href="http://ivewatingsolongtodothat.tumblr.com" >ivewatingsolongtodothat</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/james-spartan-005.tumblr.com/avatar/40'/></td>
-<td><a href="http://james-spartan-005.tumblr.com" >james-spartan-005</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan 005 James</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/j0hn117.tumblr.com/avatar/40'/></td>
-<td><a href="http://j0hn117.tumblr.com" >j0hn117</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/john-sierra-117.tumblr.com/avatar/40'/></td>
-<td><a href="http://john-sierra-117.tumblr.com" >john-sierra-117</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/justhalothings.tumblr.com/avatar/40'/></td>
-<td><a href="http://justhalothings.tumblr.com" >justhalothings</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Comics</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/jxrge-052.tumblr.com/avatar/40'/></td>
-<td><a href="http://jxrge-052.tumblr.com">jxrge-052</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 052 Jorge</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/kingodstspartan.tumblr.com/avatar/40'/></td>
-<td><a href="http://kingodstspartan.tumblr.com">kingodstspartan</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/kiri-neko.tumblr.com/avatar/40'/></td>
-<td><a href="http://kiri-neko.tumblr.com" >kiri-neko</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/koryface.tumblr.com/avatar/40'/></td>
-<td><a href="http://koryface.tumblr.com" >koryface</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/lady-owl.tumblr.com/avatar/40'/></td>
-<td><a href="http://lady-owl.tumblr.com" >lady-owl</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ladywolvesbayne.tumblr.com/avatar/40'/></td>
-<td><a href="http://ladywolvesbayne.tumblr.com" >ladywolvesbayne</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/lets-meet-on-mars.tumblr.com/avatar/40'/></td>
-<td><a href="http://lets-meet-on-mars.tumblr.com" >lets-meet-on-mars</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/leviwastaken.tumblr.com/avatar/40'/></td>
-<td><a href="http://leviwastaken.tumblr.com" >leviwastaken</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/lite50.tumblr.com/avatar/40'/></td>
-<td><a href="http://lite50.tumblr.com" >lite50</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Forerunner</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/livsagamer.tumblr.com/avatar/40'/></td>
-<td><a href="http://livsagamer.tumblr.com" >livsagamer</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/lizb0rg.tumblr.com/avatar/40'/></td>
-<td><a href="http://lizb0rg.tumblr.com" >lizb0rg</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/lone-and-ruthless.tumblr.com/avatar/40'/></td>
-<td><a href="http://lone-and-ruthless.tumblr.com" >lone-and-ruthless</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 007 Charles</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/machinam-vel-nerve.tumblr.com/avatar/40'/></td>
-<td><a href="http://machinam-vel-nerve.tumblr.com" >machinam-vel-nerve</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/mahkeechava.tumblr.com/avatar/40'/></td>
-<td><a href="http://mahkeechava.tumblr.com" >mahkeechava</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/maschinen-mensch.tumblr.com/avatar/40'/></td>
-<td><a href="http://maschinen-mensch.tumblr.com" >maschinen-mensch</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masshaloeffect.tumblr.com/avatar/40'/></td>
-<td><a href="http://masshaloeffect.tumblr.com" >masshaloeffect</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master97chief.tumblr.com/avatar/40'/></td>
-<td><a href="http://master97chief.tumblr.com" >master97chief</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master--chief.tumblr.com/avatar/40'/></td>
-<td><a href="http://master--chief.tumblr.com" >master--chief</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master-cheif-117.tumblr.com/avatar/40'/></td>
-<td><a href="http://master-cheif-117.tumblr.com" >master-cheif-117</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefandholland.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefandholland.tumblr.com" >masterchiefandholland</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John and OC Holland</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefchronicles.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefchronicles.tumblr.com" >masterchiefchronicles</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefdaytoday.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefdaytoday.tumblr.com" >masterchiefdaytoday</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Photos</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefdoesthings.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefdoesthings.tumblr.com" >masterchiefdoesthings</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Animation/Viblog</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master-chief-does-things.tumblr.com/avatar/40'/></td>
-<td><a href="http://master-chief-does-things.tumblr.com" >master-chief-does-things</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefforever.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefforever.tumblr.com" >masterchiefforever</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master-chief-is-a-negro.tumblr.com/avatar/40'/></td>
-<td><a href="http://master-chief-is-a-negro.tumblr.com" >master-chief-is-a-negro</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master-chiefishere.tumblr.com/avatar/40'/></td>
-<td><a href="http://master-chiefishere.tumblr.com" >master-chiefishere</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/master-chief-spartan117-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://master-chief-spartan117-blog.tumblr.com" >master-chief-spartan117-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP/Ask - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/masterchiefspartanjohn117.tumblr.com/avatar/40'/></td>
-<td><a href="http://masterchiefspartanjohn117.tumblr.com" >masterchiefspartanjohn117</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/mastercortana.tumblr.com/avatar/40'/></td>
-<td><a href="http://mastercortana.tumblr.com" >mastercortana</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to kaldwins</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/mbangelofdeath.tumblr.com/avatar/40'/></td>
-<td><a href="http://mbangelofdeath.tumblr.com" >mbangelofdeath</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Screenshots</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/metaboob.tumblr.com/avatar/40'/></td>
-<td><a href="http://metaboob.tumblr.com" >metaboob</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/mika-117.tumblr.com/avatar/40'/></td>
-<td><a href="http://mika-117.tumblr.com" >mika-117</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/modus-art.tumblr.com/avatar/40'/></td>
-<td><a href="http://modus-art.tumblr.com" >modus-art</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/monument-to-all-your-sins.tumblr.com/avatar/40'/></td>
-<td><a href="http://monument-to-all-your-sins.tumblr.com" >monument-to-all-your-sins</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Flood Gravemind</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/mythic-on.tumblr.com/avatar/40'/></td>
-<td><a href="http://mythic-on.tumblr.com" >mythic-on</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/nagunkgunk.tumblr.com/avatar/40'/></td>
-<td><a href="http://nagunkgunk.tumblr.com" >nagunkgunk</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/nakedarbiter.tumblr.com/avatar/40'/></td>
-<td><a href="http://nakedarbiter.tumblr.com" >nakedarbiter</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP/Ask - Thel 'Vadam & Sesa 'Rafumee</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ndas-sraom.tumblr.com/avatar/40'/></td>
-<td><a href="http://ndas-sraom.tumblr.com" >ndas-sraom</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/neverbreaksapromise.tumblr.com/avatar/40'/></td>
-<td><a href="http://neverbreaksapromise.tumblr.com" >neverbreaksapromise</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/nightstreak1.tumblr.com/avatar/40'/></td>
-<td><a href="http://nightstreak1.tumblr.com" >nightstreak1</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>RP - Spartan Mason</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/noble5-vlogs.tumblr.com/avatar/40'/></td>
-<td><a href="http://noble5-vlogs.tumblr.com" >noble5-vlogs</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General/Concept Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/noble-6.tumblr.com/avatar/40'/></td>
-<td><a href="http://noble-6.tumblr.com" >noble-6</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/nocrossfire.tumblr.com/avatar/40'/></td>
-<td><a href="http://nocrossfire.tumblr.com" >nocrossfire</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/notaidenpearce.tumblr.com/avatar/40'/></td>
-<td><a href="http://notaidenpearce.tumblr.com" >notaidenpearce</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/oddworldoddities-forge117.tumblr.com/avatar/40'/></td>
-<td><a href="http://oddworldoddities-forge117.tumblr.com" >oddworldoddities-forge117</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/odstmarseilles.tumblr.com/avatar/40'/></td>
-<td><a href="http://odstmarseilles.tumblr.com" >odstmarseilles</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Staff Sergeant Marseilles</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/odst-reaper.tumblr.com/avatar/40'/></td>
-<td><a href="http://odst-reaper.tumblr.com" >odst-reaper</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - ODST Damien Reaper</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/odst-wolf.tumblr.com/avatar/40'/></td>
-<td><a href="http://odst-wolf.tumblr.com" >odst-wolf</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - ODST</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ofaxios.tumblr.com/avatar/40'/></td>
-<td><a href="http://ofaxios.tumblr.com" >ofaxios</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST Jackson O'Reilly</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/officeofnavalintelligence.tumblr.com/avatar/40'/></td>
-<td><a href="http://officeofnavalintelligence.tumblr.com" >officeofnavalintelligence</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/0ffensivebias.tumblr.com/avatar/40'/></td>
-<td><a href="http://0ffensivebias.tumblr.com" >0ffensivebias</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Lore/Commentary</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/olympiavale.tumblr.com/avatar/40'/></td>
-<td><a href="http://olympiavale.tumblr.com" >olympiavale</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/one-true-kaidon.tumblr.com/avatar/40'/></td>
-<td><a href="http://one-true-kaidon.tumblr.com" >one-true-kaidon</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/onifiles.tumblr.com/avatar/40'/></td>
-<td><a href="http://onifiles.tumblr.com" >onifiles</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Fiction</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/oni-section-6.tumblr.com/avatar/40'/></td>
-<td><a href="http://oni-section-6.tumblr.com" >oni-section-6</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/opticleafpool.tumblr.com/avatar/40'/></td>
-<td><a href="http://opticleafpool.tumblr.com" >opticleafpool</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - RVB AGT Carolina & AI Epsilon</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/orbitaldroptechie.tumblr.com/avatar/40'/></td>
-<td><a href="http://orbitaldroptechie.tumblr.com" >orbitaldroptechie</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST David Marasco</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/osirisjuggernaut.tumblr.com/avatar/40'/></td>
-<td><a href="http://osirisjuggernaut.tumblr.com" >osirisjuggernaut</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Holly Tanaka</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/paris-class-captain.tumblr.com/avatar/40'/></td>
-<td><a href="http://paris-class-captain.tumblr.com" >paris-class-captain</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - CPT Elena Tarunt</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/picturesofhalo.tumblr.com/avatar/40'/></td>
-<td><a href="http://picturesofhalo.tumblr.com" >picturesofhalo</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/pink-spartan117.tumblr.com/avatar/40'/></td>
-<td><a href="http://pink-spartan117.tumblr.com" >pink-spartan117</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/pinupiisms.tumblr.com/avatar/40'/></td>
-<td><a href="http://pinupiisms.tumblr.com" >pinupiisms</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - RVB AGT Delaware</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/persistent-but-useless.tumblr.com/avatar/40'/></td>
-<td><a href="http://persistent-but-useless.tumblr.com" >persistent-but-useless</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 150 Matilde</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/pfc-crespo.tumblr.com/avatar/40'/></td>
-<td><a href="http://pfc-crespo.tumblr.com" >pfc-crespo</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - ODST Michael Crespo</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/pfc-shale-unsc.tumblr.com/avatar/40'/></td>
-<td><a href="http://pfc-shale-unsc.tumblr.com" >pfc-shale-unsc</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - PFC Shale</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/populatehalo-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://populatehalo-blog.tumblr.com" >populatehalo-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 3</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/probably--confused.tumblr.com/avatar/40'/></td>
-<td><a href="http://probably--confused.tumblr.com" >probably--confused</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/rbmreclaimer.tumblr.com/avatar/40'/></td>
-<td><a href="http://rbmreclaimer.tumblr.com" >rbmreclaimer</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/reachdailychallenges.tumblr.com/avatar/40'/></td>
-<td><a href="http://reachdailychallenges.tumblr.com" >reachdailychallenges</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: Reach</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/reclaimerr.tumblr.com/avatar/40'/></td>
-<td><a href="http://reclaimerr.tumblr.com" >reclaimerr</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/redvsbluegifs.tumblr.com/avatar/40'/></td>
-<td><a href="http://redvsbluegifs.tumblr.com" >redvsbluegifs</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Screenshots/Focus - RVB</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/redvsbluescreenshots.tumblr.com/avatar/40'/></td>
-<td><a href="http://redvsbluescreenshots.tumblr.com" >redvsbluescreenshots</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Screenshots/Focus - RVB</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/rememberreachpage-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://rememberreachpage-blog.tumblr.com" >rememberreachpage-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Community</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/revocate--animos.tumblr.com/avatar/40'/></td>
-<td><a href="http://revocate--animos.tumblr.com" >revocate--animos</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Softly Whispers Newfound Stars</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ricktor-225.tumblr.com/avatar/40'/></td>
-<td><a href="http://ricktor-225.tumblr.com/" >ricktor-225</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 225 Ricktor</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/riley-g315.tumblr.com/avatar/40'/></td>
-<td><a href="http://riley-g315.tumblr.com/" >riley-g315</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan G315 Riley</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/rlabreche.tumblr.com/avatar/40'/></td>
-<td><a href="http://rlabreche.tumblr.com" >rlabreche</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/rtasvadum.tumblr.com/avatar/40'/></td>
-<td><a href="http://rtasvadum.tumblr.com" >rtasvadum</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/rvbmuses.tumblr.com/avatar/40'/></td>
-<td><a href="http://rvbmuses.tumblr.com" >rvbmuses</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - RVB [All characters]</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sailorsanghelios.tumblr.com/avatar/40'/></td>
-<td><a href="http://sailorsanghelios.tumblr.com" >sailorsanghelios</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - Sangheili</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sanctusdehonos.tumblr.com/avatar/40'/></td>
-<td><a href="http://sanctusdehonos.tumblr.com" >sanctusdehonos</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sangheili-zealot.tumblr.com/avatar/40'/></td>
-<td><a href="http://sangheili-zealot.tumblr.com" >sangheili-zealot</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Fleetmaster Tuyok</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sanguispatres.tumblr.com/avatar/40'/></td>
-<td><a href="http://sanguispatres.tumblr.com" >sanguispatres</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Fiira 'Srao</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sassy-meta.tumblr.com/avatar/40'/></td>
-<td><a href="http://sassy-meta.tumblr.com" >sassy-meta</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/savior-of-humanity.tumblr.com/avatar/40'/></td>
-<td><a href="http://savior-of-humanity.tumblr.com" >savior-of-humanity</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/seattle138.tumblr.com/avatar/40'/></td>
-<td><a href="http://seattle138.tumblr.com" >seattle138</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/secundusalicui.tumblr.com/avatar/40'/></td>
-<td><a href="http://secundusalicui.tumblr.com/" >secundusalicui</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan S174</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/separatist-arbiter.tumblr.com/avatar/40'/></td>
-<td><a href="http://separatist-arbiter.tumblr.com/" >separatist-arbiter</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>RP - Thel 'Vadam</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/serina1292-4.tumblr.com/avatar/40'/></td>
-<td><a href="http://serina1292-4.tumblr.com/" >serina1292-4</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/shadowhorizons.tumblr.com/avatar/40'/></td>
-<td><a href="http://shadowhorizons.tumblr.com/" >shadowhorizons</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/shiipmaster.tumblr.com/avatar/40'/></td>
-<td><a href="http://shiipmaster.tumblr.com/" >shiipmaster</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Rtas 'Vadum</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/shipmastervadum.tumblr.com/avatar/40'/></td>
-<td><a href="http://shipmastervadum.tumblr.com/" >shipmastervadum</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Rtas 'Vadum</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/shootingmywayout.tumblr.com/avatar/40'/></td>
-<td><a href="http://shootingmywayout.tumblr.com" >shootingmywayout</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/short-and-fast-assault.tumblr.com/avatar/40'/></td>
-<td><a href="http://short-and-fast-assault.tumblr.com" >short-and-fast-assault</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - LT Marcella Meiriona</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/simon-g294.tumblr.com/avatar/40'/></td>
-<td><a href="http://simon-g294.tumblr.com" >simon-g294</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan G294 Simon</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/soccom-operations.tumblr.com/avatar/40'/></td>
-<td><a href="http://soccom-operations.tumblr.com" >soccom-operations</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP/Ask - Spartans Mikai and Cap</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/solais--joyeuse.tumblr.com/avatar/40'/></td>
-<td><a href="http://solais--joyeuse.tumblr.com" >solais--joyeuse</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - AI Solais</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/somealienswife.tumblr.com/avatar/40'/></td>
-<td><a href="http://somealienswife.tumblr.com" >somealienswife</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sparkling-nerdom662.tumblr.com/avatar/40'/></td>
-<td><a href="http://sparkling-nerdom662.tumblr.com" >sparkling-nerdom662</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-ll.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-ll.tumblr.com" >spartan-ll</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-117unsc.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-117unsc.tumblr.com" >spartan-117unsc</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-b214.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-b214.tumblr.com" >spartan-b214</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan B214 Ryder</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-clayton.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-clayton.tumblr.com" >spartan-clayton</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan 499 Clayton</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartancommanderpalmer-archive.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartancommanderpalmer-archive.tumblr.com" >spartancommanderpalmer-archive</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan Palmer</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-d371.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-d371.tumblr.com" >spartan-d371</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan D371 Joe</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-g039.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-g039.tumblr.com" >spartan-g039</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan G039 Quinn</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-g067-leo.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-g067-leo.tumblr.com" >spartan-g067-leo</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan G067 Leo</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-joe371.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-joe371.tumblr.com" >spartan-joe371</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan D371 Joe</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-kelly-087.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-kelly-087.tumblr.com" >spartan-kelly-087</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartanlocke.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartanlocke.tumblr.com" >spartanlocke</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom/General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-locke.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-locke.tumblr.com" >spartan-locke</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartanmae021.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartanmae021.tumblr.com/" >spartanmae021</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 021 Mae</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartanmandy.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartanmandy.tumblr.com" >spartanmandy</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartans-assassinating.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartans-assassinating.tumblr.com" >spartans-assassinating</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartansinspace.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartansinspace.tumblr.com" >spartansinspace</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/spartan-stories.tumblr.com/avatar/40'/></td>
-<td><a href="http://spartan-stories.tumblr.com" >spartan-stories</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Fiction</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/sparth.tumblr.com/avatar/40'/></td>
-<td><a href="http://sparth.tumblr.com/" >sparth</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Artwork</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/speaksangheilitome.tumblr.com/avatar/40'/></td>
-<td><a href="http://speaksangheilitome.tumblr.com/" >speaksangheilitome</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Olympia Vale</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/standwithsekibo.tumblr.com/avatar/40'/></td>
-<td><a href="http://standwithsekibo.tumblr.com/" >standwithsekibo</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Sekibo supporter</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/starlight-warden.tumblr.com/avatar/40'/></td>
-<td><a href="http://starlight-warden.tumblr.com">starlight-warden</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom Artwork & Music</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/stellar-architect.tumblr.com/avatar/40'/></td>
-<td><a href="http://stellar-architect.tumblr.com/" >stellar-architect</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Grace In Flight</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/stratiotis.tumblr.com/avatar/40'/></td>
-<td><a href="http://stratiotis.tumblr.com/" >stratiotis</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Edward Buck</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/suddenlyoranges.tumblr.com/avatar/40'/></td>
-<td><a href="http://suddenlyoranges.tumblr.com/" >suddenlyoranges</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/tbonechessor.tumblr.com/avatar/40'/></td>
-<td><a href="http://tbonechessor.tumblr.com/" >tbonechessor</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/tellthattothecovenant.tumblr.com/avatar/40'/></td>
-<td><a href="http://tellthattothecovenant.tumblr.com" >tellthattothecovenant</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/teletraan-i.tumblr.com/avatar/40'/></td>
-<td><a href="http://teletraan-i.tumblr.com" >teletraan-i</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/temporaria-ouium.tumblr.com/avatar/40'/></td>
-<td><a href="http://temporaria-ouium.tumblr.com/" >temporaria-ouium</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 141 Cal</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thathalofan.tumblr.com/avatar/40'/></td>
-<td><a href="http://thathalofan.tumblr.com" >thathalofan</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/th3-r00k13.tumblr.com/avatar/40'/></td>
-<td><a href="http://th3-r00k13.tumblr.com/" >th3-r00k13</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST Rookie</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-arbiter.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-arbiter.tumblr.com" >the-arbiter</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thechiefcanuck.tumblr.com/avatar/40'/></td>
-<td><a href="http://thechiefcanuck.tumblr.com" >thechiefcanuck</a></td><td sorttable_customkey="1"><G></G></td>
-<td>News/Updates</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thedidactreturns.tumblr.com/avatar/40'/></td>
-<td><a href="http://thedidactreturns.tumblr.com" >thedidactreturns</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-elite-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-elite-blog.tumblr.com" >the-elite-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - [Various Covenant]</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thefallenlistener.tumblr.com/avatar/40'/></td>
-<td><a href="http://thefallenlistener.tumblr.com" >thefallenlistener</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/theforerunnersociety.tumblr.com/avatar/40'/></td>
-<td><a href="http://theforerunnersociety.tumblr.com" >theforerunnersociety</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Forerunner</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thegreyprincess.tumblr.com/avatar/40'/></td>
-<td><a href="http://thegreyprincess.tumblr.com" >thegreyprincess</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thehaloarchive.tumblr.com/avatar/40'/></td>
-<td><a href="http://thehaloarchive.tumblr.com">thehaloarchive</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Archive</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thehalogirl.tumblr.com/avatar/40'/></td>
-<td><a href="http://thehalogirl.tumblr.com">thehalogirl</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thehaloman.tumblr.com/avatar/40'/></td>
-<td><a href="http://thehaloman.tumblr.com" >thehaloman</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-infinitys-armory.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-infinitys-armory.tumblr.com" >the-infinitys-armory</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Screenshots</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thehaloring.tumblr.com/avatar/40'/></td>
-<td><a href="http://thehaloring.tumblr.com" >thehaloring</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-last-forerunner.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-last-forerunner.tumblr.com" >the-last-forerunner</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Ur-Didact</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thelvadam-unashamed.tumblr.com/avatar/40'/></td>
-<td><a href="http://thelvadam-unashamed.tumblr.com" >thelvadam-unashamed</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-mantle-abandoned.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-mantle-abandoned.tumblr.com/" >the-mantle-abandoned</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Sun-Unwinds-Watered-Flower</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/themantlistsart.tumblr.com/avatar/40'/></td>
-<td><a href="http://themantlistsart.tumblr.com/" >themantlistsart</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-master-chief.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-master-chief.tumblr.com/" >the-master-chief</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-meta.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-meta.tumblr.com" >the-meta</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Focus - RVB</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-mexican-spartan.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-mexican-spartan.tumblr.com" >the-mexican-spartan</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-noblest-six.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-noblest-six.tumblr.com/" >
- the-noblest-six</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan B312</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thequantumqueer.tumblr.com/avatar/40'/></td>
-<td><a href="http://thequantumqueer.tumblr.com/" >thequantumqueer</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thereach.tumblr.com/avatar/40'/></td>
-<td><a href="http://thereach.tumblr.com/" >thereach</a></td>
-<td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo: Reach</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-real-cortana.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-real-cortana.tumblr.com/" >
- the-real-cortana</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-ringed-haven.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-ringed-haven.tumblr.com/" >the-ringed-haven</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-ruskie-spartan.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-ruskie-spartan.tumblr.com/" >the-ruskie-spartan</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan 015 Annyastasia</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-summer-rose.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-summer-rose.tumblr.com/" >the-summer-rose</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Summer Rose</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-swords-of-sanghelios.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-swords-of-sanghelios.tumblr.com/" >the-swords-of-sanghelios</a></td><td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/theunknownnorthandsouth.tumblr.com/avatar/40'/></td>
-<td><a href="http://theunknownnorthandsouth.tumblr.com/">theunknownnorthandsouth</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - RVB AI Eta & AI Iota</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/theunofficialstory.tumblr.com/avatar/40'/></td>
-<td><a href="http://theunofficialstory.tumblr.com/">theunofficialstory</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Jameson Locke</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-ur-didact.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-ur-didact.tumblr.com/" >the-ur-didact</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-woman-in-blue.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-woman-in-blue.tumblr.com/" >the-woman-in-blue</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - Cortana</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/the-worst-spartan.tumblr.com/avatar/40'/></td>
-<td><a href="http://the-worst-spartan.tumblr.com/" >the-worst-spartan</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan D103 Duff</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thezolak.tumblr.com/avatar/40'/></td>
-<td><a href="http://thezolak.tumblr.com/" >thezolak</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Srax 'Zolak</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/thomaslasky.tumblr.com/avatar/40'/></td>
-<td><a href="http://thomaslasky.tumblr.com/" >thomaslasky</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/timestrandedodst.tumblr.com/avatar/40'/></td>
-<td><a href="http://timestrandedodst.tumblr.com/">timestrandedodst</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - SGT Lucas Reynolds</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/uncommon-allies.tumblr.com/avatar/40'/></td>
-<td><a href="http://uncommon-allies.tumblr.com/">uncommon-allies</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Spartan 117 John & Thel 'Vadam</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/undidiridium.tumblr.com/avatar/40'/></td>
-<td><a href="http://undidiridium.tumblr.com/" >undidiridium</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/united-nations-space-command.tumblr.com/avatar/40'/></td>
-<td><a href="http://united-nations-space-command.tumblr.com/" >united-nations-space-command</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - UNSC (auth code: axios)</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unitednationspacecommand.tumblr.com/avatar/40'/></td>
-<td><a href="http://unitednationspacecommand.tumblr.com/" >unitednationspacecommand</a></td><td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc.tumblr.com/" >unsc</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-ai-kurosawa.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-ai-kurosawa.tumblr.com/" >unsc-ai-kurosawa</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - AI Kurosawa</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-ai-roland-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-ai-roland-blog.tumblr.com/" >unsc-ai-roland-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - AI Roland</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unscarmy.tumblr.com/avatar/40'/></td>
-<td><a href="http://unscarmy.tumblr.com/" >unscarmy</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>???</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsccaptain.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsccaptain.tumblr.com/" >unsccaptain</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - CPT Andrew Poole</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/u-n-s-c-d-f.tumblr.com/avatar/40'/></td>
-<td><a href="http://u-n-s-c-d-f.tumblr.com/" >u-n-s-c-d-f</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>Focus - UNSC (auth code: axios)</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-earth-battlenet.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-earth-battlenet.tumblr.com" >unsc-earth-battlenet</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unschq.tumblr.com/avatar/40'/></td>
-<td><a href="http://unschq.tumblr.com" >unschq</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-in-amber-clad-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-in-amber-clad-blog.tumblr.com" >unsc-in-amber-clad-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Halo 4</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unscinfinitycommand.tumblr.com/avatar/40'/></td>
-<td><a href="http://unscinfinitycommand.tumblr.com" >unscinfinitycommand</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-pillarofautumn.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-pillarofautumn.tumblr.com" >unsc-pillarofautumn</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-pilot.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-pilot.tumblr.com" >unsc-pilot</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Pelican Pilot</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-resolute.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-resolute.tumblr.com" >unsc-resolute</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Fan Fiction</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-serenity.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-serenity.tumblr.com" >unsc-serenity</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - AI Serena</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unscspartan-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://unscspartan-blog.tumblr.com" >unscspartan-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Spartan 472 James</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsctrooper-blog.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsctrooper-blog.tumblr.com" >unsctrooper-blog</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/unsc-waypoint.tumblr.com/avatar/40'/></td>
-<td><a href="http://unsc-waypoint.tumblr.com/access" >unsc-waypoint</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Auxilliary (auth code: spark)</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/ur-promethean.tumblr.com/avatar/40'/></td>
-<td><a href="http://ur-promethean.tumblr.com" >ur-promethean</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Aesthetic</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/uszemoraee.tumblr.com/avatar/40'/></td>
-<td><a href="http://uszemoraee.tumblr.com" >uszemoraee</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Usze Moraee</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/uszetaham.tumblr.com/avatar/40'/></td>
-<td><a href="http://uszetaham.tumblr.com" >uszetaham</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to mamascream</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/valiantforanothersoul.tumblr.com/avatar/40'/></td>
-<td><a href="http://valiantforanothersoul.tumblr.com" >valiantforanothersoul</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - Riley Arluin</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/veryrealpolice.tumblr.com/avatar/40'/></td>
-<td><a href="http://veryrealpolice.tumblr.com" >veryrealpolice</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Fan Art</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/wakeup-chief-ineedyou.tumblr.com/avatar/40'/></td>
-<td><a href="http://wakeup-chief-ineedyou.tumblr.com" >wakeup-chief-ineedyou</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/wandering-odst.tumblr.com/avatar/40'/></td>
-<td><a href="http://wandering-odst.tumblr.com" >wandering-odst</a></td><td sorttable_customkey="1"><G></G></td>
-<td>RP - ODST OC</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/weareblueteam.tumblr.com/avatar/40'/></td>
-<td><a href="http://weareblueteam.tumblr.com" >weareblueteam</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td>General</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/we-are-halos-guardians.tumblr.com/avatar/40'/></td>
-<td><a href="http://we-are-halos-guardians.tumblr.com" >we-are-halos-guardians</a></td><td sorttable_customkey="1"><G></G></td>
-<td>General</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/we-are-odst.tumblr.com/avatar/40'/></td>
-<td><a href="http://we-are-odst.tumblr.com" >we-are-odst</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to the-ur-didact</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/whereintheworldismasterchief.tumblr.com/avatar/40'/></td>
-<td><a href="http://whereintheworldismasterchief.tumblr.com" >whereintheworldismasterchief</a></td><td sorttable_customkey="3"><R></R></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/will-for-lasting-redemption.tumblr.com/avatar/40'/></td>
-<td><a href="http://will-for-lasting-redemption.tumblr.com" >will-for-lasting-redemption</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Focus - Forerunner</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/xallhailtheconqueringherox.tumblr.com/avatar/40'/></td>
-<td><a href="http://xallhailtheconqueringherox.tumblr.com" >xallhailtheconqueringherox</a></td><td sorttable_customkey="3"><R></R></td>
-<td>RP - Jameson Locke</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/xboxscreenshots.tumblr.com/avatar/40'/></td>
-<td><a href="http://xboxscreenshots.tumblr.com" >xboxscreenshots</a></td>
-<td sorttable_customkey="1"><G></G></td>
-<td>Screenshots</td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/xman243.tumblr.com/avatar/40'/></td>
-<td><a href="http://xman243.tumblr.com" >xman243</a></td><td sorttable_customkey="2"><Y></Y></td>
-<td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/yeeeem.tumblr.com/avatar/40'/></td>
-<td><a href="http://yeeeem.tumblr.com" >yeeeem</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Comics <s>High Quality</s></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/you-have-startled-the-witch.tumblr.com/avatar/40'/></td>
-<td><a href="http://you-have-startled-the-witch.tumblr.com" >you-have-startled-the-witch</a></td><td sorttable_customkey="1"><G></G></td>
-<td>Multifandom</td></td>
-</tr>
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/yourboiaidenprice.tumblr.com/avatar/40'/></td>
-<td><a href="http://yourboiaidenprice.tumblr.com" >
- yourboiaidenprice</a></td><td sorttable_customkey="1"><G></G></td>
-<td></td></td>
-</tr>
-
-<!--
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/zehideyhole.tumblr.tumblr.com/avatar/40'/></td>
-<td><a href="http://zehideyhole.tumblr.tumblr.com" >
- zehideyhole.tumblr</a></td><td sorttable_customkey="3"><R></R></td>
-<td>[NSFW]</td>
-</tr>
--->
-
-<tr>
-<td><img src='http://api.tumblr.com/v2/blog/zenshot.tumblr.com/avatar/40'/></td>
-<td><a href="http://zenshot.tumblr.com" >zenshot</a></td><td sorttable_customkey="3"><R></R></td>
-<td>Relocated to artisticallyquiet</td>
-</tr>
-</tbody>
-</table>
+<div style="text-align: center;">
+This is a running list of my Transformers OCs, since I have too many of them. Info is liable to change as the characters become more developed, and the page will more than likely be perpetually under construction.<p>That said, feel free to peruse and enjoy!
 </div>
-            
 
-<footer id="bottom">
-Halo © Microsoft Corporation. <i>UNSC Earth Battlenet</i> was created under Microsoft's <a href="http://www.xbox.com/en-US/developers/rules">Game Content Usage Rules</a> using assets from Halo, and it is not endorsed by or affiliated with Microsoft.
+</div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry1');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Arcane
+        <con></con>
+</h1></a>
+
+    <div id="entry1" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+   <b>Designation:</b>
+    Arcane 
+</p>
+<p>
+    <b>Homeverse:</b>
+     Uniend 911.05 Alpha (Transformers Prime)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown 
+</p>
+<p>
+    <b>Status:</b>
+    Deceased
+</p>
+<p>
+    <b>Pronouns:</b>
+    He/his
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Cybertronian heavy armor groundcraft
+</p>
+<p>
+    <b>Faction:</b>
+    Decepticon
+</p>
+<p>
+    <b>Function:</b>
+    Soldier
+</p> 
+<p>
+    <b>Height:</b>
+    27'
+</p>
+<p><b>Optic/Eye color:</b>
+    Red</p>
+<p>
+    <b>Description:</b>
+   Arcane avoided the war when it first began. He was spurred into action only once his bondmate was killed. He joined the Decepticons, believing both in their ideals of a caste free Cybertron, and that they could protect his creation. Unfortunately, he was unaware that the Decepticons are the very reason his bondmate died.<p>Arcane had the ability to manipulate magnetic fields, which is why he was so big in height and bulk alike. (For anchoring purposes) It also made him a target for the enemy, since his ability was a tactical advantage. This, along with his weakened spark (sparkbreak from the extinguishing of a bond) led to his demise.
+</p>
+        
+    </block>
+</div>
+
+</div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry2');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Chris
+</h1></a>
+
+<div id="entry2" class="hidden">
+<block>
+
+<!--Change profile image urls below-->
+<img src="http://36.media.tumblr.com/4f67011f7de15084f4990d39f0f6dfa0/tumblr_inline_nqjbveRIva1rsb7h6_500.jpg"></img>
+<img src="http://40.media.tumblr.com/c73a07d5a06d409246f6226c1cca119e/tumblr_inline_nqjbvkwe9G1rsb7h6_500.jpg"></img>
+
+</block>
+<block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Elizabeth "Chris" Christina White
+</p>
+<p>
+    <b>Homeverse:</b>
+    Uniend 911.05 Alpha (Transformers Prime)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Earth
+</p>
+<p>
+    <b>Age:</b>
+   19 years
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    Female
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Height:</b>
+    5' 5"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Hazel
+</p>
+<p>
+    <b>Hair color:</b>
+    Light brown
+</p>
+<p>
+    <b>Description:</b>
+    Chris has had a less than ideal life. Firstly, she was born to a single mother. Her dad had run out on his pregnant girlfriends, so her mom was forced to raise Chris alone. Since her mom had to drop out of high school, she lacked education. Balancing three jobs, she barely kept the two afloat. This meant the Chris spent most of her childhood alone, as her mom was away working. Child services took her when she was nine, and told her she was in a neglectful home. She begged to differ. <p>Chris was bounced around a few foster homes, never fitting in with any of the families, until the day the system dumped her sorry ass on the curb.<p>Since then, Chris has always had problems with people, especially males. Once a man had the misfortune of choosing Chris as the girl to harass. He goosed Chris, and she retailiated by breaking his fingers.<p>All of them.<p>Jobs have been hard to come by since that day, so she's stuck at her minimum wage job at Plus Mart, just to make rent.<p>Or she was, until a giant alien death robot all but landed in her lap.
+</p>
+   
+</block>
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry3');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Circuit
+</h1></a>
+
+<div id="entry3" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/02e0694495674b519ea59b218011da2a/tumblr_inline_nqormqDSXX1rsb7h6_500.jpg"></img>
+<img src="http://40.media.tumblr.com/1f5d7592357448c10516d85fd75e3110/tumblr_inline_nqorn1BxXL1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/f28154f9e0bbb7f5feb69a3ad39fe8aa/tumblr_inline_nqorpakPOC1rsb7h6_500.jpg"></img>
+        
+</block>
+<block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Circuit
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, but an approximate equivalent to a 20 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    He/his
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Nokia Lumia 521 smartphone
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Engineer
+</p> 
+<p>
+    <b>Height:</b>
+   0' 6"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Purple
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 2"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Black
+</p>
+<p>
+    <b>Description:</b>
+    Circuit fled the war after only a few vorns of existence. He was a commissioned, pre-programmed spark. Someone needed an engineer, though not one so small. However, microformer engineers are quite useful as well. Circuit lived most of his life on Cybertron holed up in a wall, repairing, maintaining, or installing wiring, curcuits, and any other doodad he was told to.<p>Once he fled Cybertron, he bounced around from planet to planet and surviving on a hand to mouth basis. (He'd even been known to have to siphon energon from his own lines just to get his ship to limp its way to the next planet.) He ended up crashing on earth, of course the one planet that had not only Autobots AND Decepticons, but THE FACTION LEADERS THEMSELVES.<p>He's now staying at the Ark, since his ship was destroyed shortly after his arrival.
+</p>
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry4');"><!--post begins-->
+
+
+<h1><!--Change title of block here-->
+    Credessa 
+    <bot></bot>
+</h1></a>
+
+<div id="entry4" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://40.media.tumblr.com/fbd5fb15d3c9adc5aa461aa806fa3c1a/tumblr_inline_nqox9l6A1B1rsb7h6_500.jpg"></img>
+<img src=""></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Credessa Sage Hemmings
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Earth
+</p>
+<p>
+    <b>Age:</b>
+   18 years
+</p>
+<p>
+    <b>Status:</b>
+   Active 
+</p>
+<p>
+    <b>Pronouns:</b>
+    Female
+</p>
+<p>
+    <b>Faction:</b>
+    Non combatant, Autobot aligned
+</p>
+<p>
+    <b>Function:</b>
+    Civilian
+</p> 
+<p>
+    <b>Height:</b>
+    5' 6"
+</p>
+<p><b>Optic/Eye color:</b>
+    Hazel</p>
+<p>
+    <b>Hair color:</b>
+    Brunette
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry5');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Decibel
+</h1></a>
+
+<div id="entry5" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/2dde02d7de60980477ae844f278aaec1/tumblr_inline_nqoxan4e1c1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Decibel
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   2.7 vorns, not counting time in stasis 
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her    
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Cassette (Cybertronian scaled, not human. Mass shifting is hard!)
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Civilian
+</p> 
+<p>
+    <b>Height:</b>
+    6' 0"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Green
+</p>
+<p>
+    <b>Description:</b>
+</p>
+   
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry6');"><!--post begins-->
+<!--Change title of block here-->
+<h1>
+    Deluge 
+    <bot></bot>
+</h1></a>
+
+<div id="entry6" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Deluge
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 40 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt mode:</b>
+    F-15 Eagle
+</p>
+<p>
+    <b>Faction:</b>
+    <s>Not aligned</s>
+    Autobot
+</p>
+<p>
+    <b>Function:</b>
+    Medic
+</p> 
+<p>
+    <b>Height:</b>
+    18' 1"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Yellow
+</p>
+<p>
+    <b>Description:</b>
+</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry7');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Eliza 
+    <bot></bot>
+    <div id="nest"></div>
+</h1></a>
+
+<div id="entry7" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+<img src=""></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Elizabeth "Eliza" Tyler Fields
+</p>
+<p>
+    <b>Homeverse:</b>
+    Tyran 1211.03 Theta (Transformers: The Ride 3D)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Earth
+</p>
+<p>
+    <b>Age:</b>
+   26 years 
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    Female
+</p>
+<p>
+    <b>Faction:</b>
+    NEST, works closely with Autobots
+</p>
+<p>
+    <b>Function:</b>
+    Soldier
+</p> 
+<p>
+    <b>Height:</b>
+    5' 2"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Blue
+</p>
+<p>
+    <b>Hair color:</b>
+    Blonde
+</p>
+<p>
+    <b>Description:</b>
+</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry8');"><!--post begins-->
+<!--Change title of block here-->
+<h1>
+    Flair  
+    <bot></bot>
+</h1></a>
+
+<div id="entry8" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="https://40.media.tumblr.com/cc81a047e38979a262ecf61705f85548/tumblr_nvkelmjuJ01tlrqt9o1_500.jpg"></img>
+<img src="https://36.media.tumblr.com/58ac5e01f707687be5efc39bca9c9487/tumblr_nvkelmjuJ01tlrqt9o2_1280.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p></p>
+<b>Designation:</b>
+    Flair
+    
+
+<p></p>
+<b>Homeverse:</b>
+   Primax 984.17 Alpha (Generation 1)
+    
+    
+<p></p>
+<b>Homeworld:</b>
+    Earth
+    
+    
+<p></p>
+<b>Age:</b>
+   5 years
+    
+    
+<p></p>
+<b>Status:</b>
+    Active
+    
+    
+<p></p>
+<b>Pronouns:</b>
+    She/her
+    
+    
+<p></p>
+<b>Alt Mode:</b>
+    iPod Touch
+    
+    
+<p></p>
+<b>Faction:</b>
+    Autobot
+    
+    
+<p></p> 
+<b>Function:</b>
+    Spy
+    
+    
+<p></p>
+<b>Height:</b>
+   0' 5"
+    
+
+<p></p>
+<b>Optic/Eye color:</b>
+    Blue
+    
+    
+<p></p>
+<b>Holoform height:</b>
+    5' 0"
+    
+    
+<p></p>
+<b>Hair color (Holoform):</b>
+    Black
+    
+    
+<p></p>
+<b>Description:</b>
+    Created by Wheeljack on accident, she posesses a pseudo spark that baffles the entire Autobot science division. Her spark casing had to be built around it AFTER it was created, so her internals look a bit odd. It seems to act like a spark in most ways, though she never reads quite right on scanners and her EM field looks dampened even when she flares it on purpose. Her less than usual creation has never bothered her, as she is too busy trying to make the most of her life. She has the mindset of a human child (an eight year old or so), yet her frame looks like that of a (albeit tiny) femme in her first adult frame. <p>She wants nothing more than to help her family, the Autobots, and is often diappointed when told to remain at base for missions. She has gone on some infiltration runs, her diminutive stature making passing through security a much simpler task. This is one of the few times that she acts more befitting of her apparent age, and all childishness drops. The few mechs who have seen her in this state were quite shocked at her maturity and level-headedness. <p>As much as she enjoys helping, she still prefers being able to let herself have fun. She enjoys Earth in general, human and Cybertronian culture, animals (the fluffier the better), and meeting new people.
+    
+<!--Contact Link-->
+<form><input type="button" value="Contact" onclick="window.location.href='http://www.flair-for-music.tumblr.com'" /></form>
+
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry9');"><!--post begins-->
+<!--Change title of block here-->
+<h1>
+    Flair
+    <sgbot></sgbot>
+</h1></a>
+
+<div id="entry9" class="hidden">
+<block>
+	    
+<!--Change profile image urls below-->
+<img src="http://36.media.tumblr.com/e23c45ea6e0e71c81bf202c7a798ea18/tumblr_inline_nqou9b7PaI1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/5fbb8c980d2e20efc51c3fb9ef880506/tumblr_inline_nqou9k5nxo1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Flair
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax -408.24 Epsilon (Shattered Glass)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Earth
+</p>
+<p>
+    <b>Age:</b>
+   2 years 
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p><b>Alt Mode:</b>
+    N/A</p>
+<p>
+    <b>Faction:</b>
+    <s>Autobot property</s> Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    <s>Human specimen harvester</s> N/A
+</p> 
+<p>
+    <b>Height:</b>
+    5' 7"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Fuchsia
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 9"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Black
+</p>
+<p>
+    <b>Description:</b>
+</p>
+    
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry10');"><!--post begins-->
+<!--Change title of block here-->
+<h1>
+    Playback 
+</h1></a>
+
+    <div id="entry10" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/897e1a846ee6401df10187a7640608f2/tumblr_inline_nqoyuz09QO1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Playback
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   2.1 vorns, not counting time in stasis 
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    Him/his
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Cassette (Cybertronian scale, not human. Mass shifting is hard!)
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Civilian
+</p> 
+<p>
+    <b>Height:</b>
+    6' 0"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Green (one eye is blue in holoform)
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry11');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Polaris 
+    <bot></bot>
+</h1></a>
+
+    <div id="entry11" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://40.media.tumblr.com/8148f09e7495ede88dd3ebb15162f331/tumblr_inline_nqqpo6g5Qv1rsb7h6_500.jpg"></img>
+<img src="http://40.media.tumblr.com/328189a97a033828fe63af73ccb8b1a7/tumblr_inline_nqozka4F6o1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p><b>Designation:</b>
+    Polaris</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 16 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Volkswagon Beetle
+</p>
+<p>
+    <b>Faction:</b>
+    Autobot
+</p>
+<p>
+    <b>Function:</b>
+    Mobile artillery unit
+</p> 
+<p>
+    <b>Height:</b>
+    9' 7"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Blue
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 1"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Strawberry blonde
+</p>
+<p><b>Description:</b>
+   Polaris knew Orion Pax, back when he was a dock worker. That connection took a good long while to be discovered, Polaris had been on earth for about a week before Optimus realized why she sounded so familiar. Since the discovery, Polaris has treated Optimus like she used to treat Orion. She's been repeatedly seen hugging the Prime, and once even wrapped a feather boa she'd made around his neck. (She stole it back later, but was delighted to find that Optimus hadn't taken it off.)<p>She and her girlfriend, Spectrum, landed on Earth after stumbling across a stray Autobot signal (Actually Cosmos contacting base). The Ark crew was obviously surprised, but quite welcoming of the new arrivals.<p>Polaris is no frontliner, but she loves the look on a Con's face when the tiny femme they so obviously think is an easy target whips out a cannon bigger than she is. A few bots have actually been made a bit unnerved at the smug smile she wears as she sends a barrage of rockets on whatever unfortunate Decepticon has crossed paths with her.</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry12');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Quartzite
+</h1></a>
+
+    <div id="entry12" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Quartzite
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 50 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Cybertronian microscope/laser cutter
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Shopkeeper
+</p> 
+<p>
+    <b>Height:</b>
+    1" 9"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Yellow
+</p>
+<p>
+    <b>Description:</b>
+    Quartzite defied the stereotypical expectations of someone her frame type. She kept her shop (a combination of a repair store, pawn shop, and antique restoring) running, though she was always far from wealthy. Her customers were loyal, and that was what kept her afloat. She lived in a small room hidden behind the front counter of the shop, more of a glorified broom closet than a respectable berth room. She didn't care, she loved her job.<p>The only thing she cared about more than her precious shop was her creation, Vanadia. When war broke out, they were slow to leave. Eventually they did, fleeing to a hub of a planet that brought in new clients in droves. She restarted her shop, and it was much more successful than it ever was on Cybertron. Smaller species appreciated her lack of height, while larger species found her size novel.<p>Her hands only have four fingers each, and her digits are much thinner than normal so that fine repair work can be done without them getting in the way. (Think just a bit thicker than TFP Soundwave's digits.) They also have the ability to hyperextend for the same reason. They contain many more sensors than the average servo, which makes delicate work easier.
+</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry13');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Reverb
+</h1></a>
+
+    <div id="entry13" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://40.media.tumblr.com/edbcef2ed905edd7d41567dc6333c3ea/tumblr_inline_nqoyo0vixS1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Reverb
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>    
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 40 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Cybertronain groundcraft
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Civilian
+</p> 
+<p>
+    <b>Height:</b>
+    16' 0"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Green
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 7"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Ginger
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry14');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Shadewalker
+    <con></con>
+    <bot></bot>
+</h1></a>
+
+    <div id="entry14" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    <s>Shadewalker</s> Nightrunner
+</p>
+<p>
+    <b>Homeverse:</b>
+    Uniend 911.05 Alpha (Transformers Prime)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 18 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    He/his
+</p>
+<p>
+    <b>Alt Mode:</b>
+    2015 Corvette Stingray
+</p>
+<p>
+    <b>Faction:</b>
+    <s>Decepticon</s> <s>not aligned</s> Autobot
+</p>
+<p>
+    <b>Function:</b>
+    Sniper
+</p> 
+<p>
+    <b>Height:</b>
+    20' 2"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    <s>Red</s> Blue
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 7"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Black
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry15');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Spectrum 
+    <bot></bot>
+</h1></a>
+
+    <div id="entry15" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://36.media.tumblr.com/dac7c3e4b2daf1b5df0d80dc26da3023/tumblr_inline_nqp0i9EHhe1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Spectrum
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 17 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+    F-86 Fighter jet
+</p>
+<p>
+    <b>Faction:</b>
+    Autobot
+</p>
+<p>
+    <b>Function:</b>
+    Air support
+</p> 
+<p>
+    <b>Height:</b>
+    15' 10"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Yellow
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 9"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Blonde
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry16');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Starchaser 
+    <bot></bot>
+</h1></a>
+
+    <div id="entry16" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/1d2fbd086aa5847eab3f5206e494b3f1/tumblr_inline_nqozu6UJSE1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Starchaser
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Around 10 vorns, approximate equivalent to a 16 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+</p>
+<p>
+    <b>Faction:</b>
+    <s>Not aligned</s> Autobot
+</p>
+<p>
+    <b>Function:</b>
+    <s>Civilian</s> Medic in training
+</p> 
+<p>
+    <b>Height:</b>
+    16' 0"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Blue
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 5"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Blonde
+</p>
+<p>
+    <b>Description:</b>
+</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry17');"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    Surefire 
+    <bot></bot>
+</h1></a>
+
+    <div id="entry17" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://40.media.tumblr.com/7f2ba1a79c7326575f550e0aced72504/tumblr_inline_nqp0ookduH1rsb7h6_500.jpg"></img>
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Surefire
+</p>
+<p>
+    <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1)
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 30 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+    Crown Victoria LX
+</p>
+<p>
+    <b>Faction:</b>
+    Autobot
+</p>
+<p>
+    <b>Function:</b>
+    Engineer
+</p> 
+<p>
+    <b>Height:</b>
+    17' 3"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Blue
+</p>
+<p>
+    <b>Holoform height:</b>
+    5' 6"
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+    Brown
+</p>
+<p>
+    <b>Description:</b>
+</p>
+        
+    </block>
+
+</div></div><!--post ends-->
+
+
+
+<div id="post"><a href="javascript:unhide('entry18');"><!--post begins-->
+
+<h1 id="bottom"><!--Change title of block here-->
+    Vanadia
+</h1></a>
+
+    <div id="entry18" class="hidden">
+    <block>
+	    
+<!--Change profile image urls below-->
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+    </block>
+    <block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+    Vanadia
+</p>
+<p>
+   <b>Homeverse:</b>
+    Primax 984.17 Alpha (Generation 1) 
+</p>
+<p>
+    <b>Homeworld:</b>
+    Cybertron
+</p>
+<p>
+    <b>Age:</b>
+   Unknown, approximate equivalent to a 19 year old human
+</p>
+<p>
+    <b>Status:</b>
+    Active
+</p>
+<p>
+    <b>Pronouns:</b>
+    She/her
+</p>
+<p>
+    <b>Alt Mode:</b>
+</p>
+<p>
+    <b>Faction:</b>
+    Not aligned
+</p>
+<p>
+    <b>Function:</b>
+    Tattoo artist, armor engraver, flavored energon maker
+</p> 
+<p>
+    <b>Height:</b>
+    2' 7"
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+    Yellow
+</p>
+<p>
+    <b>Description:</b>
+    Vanadia worked as an engineer, usually holed up in walls or consoles for repair and maintenence. She was good at her job, but much preferred working in her mom's store.<p>She lived in her creator's shop, the door to her room situated by the display of antique engraved energon cylinders in the back of the store. She did very high quality engravings (read as: Cybertronian tattoos) for a very low price. She also had the best flavored energon in Altihex. Sadly, she had to charge a bit more for that, since supplies were expensive. Her customers didn't seem to mind, though.<p>When she and her creator, Quartzite, fled Cybertron she restarted her side business alongside her mother's shop. Honestly,she was happy to be free of her engineering duties. The extra time allowed her to perfect her engraving and master tattoos and piercings, which she offered to her non-metallic customers.<p>She was built with hands like her mother. In order to do her engineering duties, her mother created a set of armor to put on over her hands, essentially gloves. They thicken her fingers to an average width and prevent hyperextension. They contain the same stimuli detectors in a normal servo, so she feels less through them than with her own hyper-sensitive servos. When the gloves are off the data port for those sensors to plug into are visible in her wrists. Whenever she isn't at work she has them off because likes the fact that she shares a feature with her creator, and she misses the tactile sensations absent while wearing the extra armor. 
+</p>
+        
+    </block>
+
+</div></div>
+<!--post ends-->
+
+
+
+
+
+
+
+<div class="hidden">
+
+
+<div id="post"><!--post begins-->
+
+<h1><!--Change title of block here-->
+    TEMPLATE 
+    <bot></bot>
+    <con></con>
+    <sgbot></sgbot>
+    <sgcon></sgcon>
+    <nest></nest>
+</h1>
+<block>
+	    
+<!--Change image urls below-->
+
+<img src="http://41.media.tumblr.com/c1e9e7e1f82d16c06b40aa89085f2148/tumblr_inline_nqfoaqwl0i1rsb7h6_500.jpg"></img>
+
+<img src="http://41.media.tumblr.com/96a1c66e37a7fef09175cde32597b3de/tumblr_inline_nqfob1A18l1rsb7h6_500.jpg"></img>
+        
+</block>
+<block>
+        
+<!--Change info below-->
+<p>
+    <b>Designation:</b>
+</p>
+<p>
+    <b>Homeverse:</b>
+</p>
+<p>
+    <b>Homeworld:</b>
+</p>
+<p>
+    <b>Age:</b>
+</p>
+<p>
+    <b>Status:</b>
+</p>
+<p>
+    <b>Pronouns:</b>
+</p>
+<p>
+    <b>Faction:</b>
+</p>
+<p>
+    <b>Function:</b>
+</p> 
+<p>
+    <b>Height:</b>
+</p>
+<p>
+    <b>Optic/Eye color:</b>
+</p>
+<p>
+    <b>Holoform height:</b>
+</p>
+<p>
+    <b>Hair color (Holoform):</b>
+</p>
+<p>
+    <b>Description:</b>
+</p>
+
+
+</block>
+
+</div></div><!--post ends-->
+
+
+
+</div><!--End of Entries-->
+
+<footer><!--Footer-->
+    {Title} {CopyrightYears}
 </footer>
 
 </body>
-
-
 </html>
